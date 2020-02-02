@@ -12,10 +12,12 @@ class Nuclei(object):
         self.symbol = '1'
 
     def tryDecay(self):
-        """takeing random number as """
+        """method to determine whether this nuclei will decay in this timestep"""
         rand = random()
         if (rand <= Nuclei.p):
-            self.symbol = '0'
+            self.symbol = '0'  # Symbol becoming '0' means the nuclei has decayed
+
 
     def printSym(self):
+        """method to print the nuclei's state(symbol)"""
         print(self.symbol,end = ' ')
